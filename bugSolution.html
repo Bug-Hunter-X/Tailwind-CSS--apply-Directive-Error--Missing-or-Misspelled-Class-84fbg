@@ -1,0 +1,28 @@
+The solution is to ensure that `text-red-600` is defined in your `tailwind.config.js` file or to correctly spell the class name.  If you intend to use a custom class, you'll need to define it in your `tailwind.config.js` file.
+
+```html
+<div class="bg-blue-500 text-red-600">
+</div>
+```
+
+Alternatively, if you define your custom classes, make sure they are correctly configured and imported into your project.
+
+```javascript
+// tailwind.config.js
+module.exports = {
+  // ...other configurations
+  theme: {
+    extend: {
+      textColor: {
+        'custom-red': '#ff0000', // Example custom color
+      }
+    }
+  },
+  plugins: [],
+}
+```
+
+```html
+<div class="bg-blue-500 @apply text-custom-red">
+</div>
+```
